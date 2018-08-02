@@ -1,0 +1,44 @@
+#main {
+    height: 800px;
+    width: 960px;
+    margin: auto;
+    background: linear-gradient(blue,white);
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    color: red;
+    font-size: 6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-left: 2rem;
+}
+
+#hangman {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    float: left;
+}
+
+#word,
+#guessesRemaining {
+    font-size: 3rem;
+    margin-left: 2rem;
+    padding-left: 2rem;
+    font-family: 'Luckiest Guy', cursive;
+    margin-bottom: 1rem;
+}
+
+#guesses {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#prompt {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-top: 0;
+}
