@@ -6,15 +6,18 @@
 }
 
 h1 {
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Raleway', sans-serif;
     color: red;
-    font-size: 6rem;
+    font-size: 12rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 2rem auto 0;
 }
 
 h2 {
-    margin-left: 2rem;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 6rem;
+    text-align: center;
+    margin-top: -9rem;
 }
 
 #hangman {
@@ -30,6 +33,10 @@ h2 {
     padding-left: 2rem;
     font-family: 'Luckiest Guy', cursive;
     margin-bottom: 1rem;
+}
+
+#word {
+    color: red;
 }
 
 #guesses {
