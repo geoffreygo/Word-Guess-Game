@@ -1,24 +1,27 @@
 var heroes = ["superman", "batman", "aquaman", "spiderman", "daredevil", "hellboy", "wolverine", "starlord", "deadpool", "robin", "hawkeye", "rorschach", "cyborg", "cyclops", "iceman", "colossus", "nightcrawler", "magneto", "gambit", "psylocke", "antman", "havok", "vision", "quicksilver", "powerman", "shehulk", "hawkman", "supergirl", "mystique", "punisher", "dazzler"]
-var chosenLetters = [];
-var currentWord = [];
-var spaces = [];
-var currentLetter;
 var gamesWon = 0;
-var guesses = 6;
 var started = false;
+// choose a random word from the heroes array
+var hangman = heroes[Math.floor(Math.random() * heroes.length)];
+// guesses remaining
+var guesses = 6;
+// array to store letters user has guessed this game
+var chosenLetters = [];
+// array to store underlines representing unguessed letters
+var spaces = [];
+// array to store letters of random word from heroes array
+var currentWord = [];
 
 document.querySelector("#hangman").innerHTML = "<img src='assets/images/h6.png' alt='hangman'/>"
 
 function startGame() {
-    // choose a random word from the heroes array
-    var hangman = heroes[Math.floor(Math.random() * heroes.length)];
-    // reset variables for second and further games
+    hangman = heroes[Math.floor(Math.random() * heroes.length)];
     guesses = 6;
     chosenLetters = [];
     spaces = [];
     currentWord = [];
 
-    // place the letters of the random word into an array
+    // place the letters of the random word into the currentWord array
     for (var i = 0; i < hangman.length; i++) {
         currentWord.push(hangman.charAt(i));
     };
@@ -73,7 +76,7 @@ document.onkeyup = function (event) {
         started = true;
     } else {
     // put the typed letter in a variable    
-    currentLetter = event.key;
+     var currentLetter = event.key;
 
     document.querySelector("#prompt").innerHTML = "Choose another letter!";
     // Compare the typed letter to the array with previously typed letters to see if it has
